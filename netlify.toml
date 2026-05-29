@@ -1,0 +1,8 @@
+[build]
+  # Netlify should run builds from the `frontend` directory in this monorepo
+  base = "frontend"
+  command = "npm run build"
+  publish = "frontend/.next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
