@@ -1,0 +1,10 @@
+[app]
+  # change this before deploying if you want a specific app name
+  name = "cineverse-frontend"
+  # default builder will use Dockerfile in `frontend/` when deploying from that folder
+
+[build]
+  image = ""
+
+[env]
+  PORT = "3000"

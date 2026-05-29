@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+httpx
+python-dotenv
+qdrant-client
+openai
+asyncpg

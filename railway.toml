@@ -1,0 +1,28 @@
+# Railway configuration for Cineverse backend
+# Customize `project`, `service` and environment variables before deploying.
+
+project = "cineverse"
+
+[[services]]
+name = "cineverse-backend"
+path = "backend"
+# If you want Railway to run the Uvicorn command instead of using the Dockerfile,
+# uncomment `startCommand` below. By default Railway will detect the Dockerfile
+# in `backend/` and build the container.
+# startCommand = "uvicorn main:app --host 0.0.0.0 --port 8000"
+
+[env]
+# Fill these values in Railway dashboard or via `railway variables` CLI.
+TMDB_API_KEY = ""
+SANITY_API_TOKEN = ""
+GROQ_API_KEY = ""
+GROQ_MODEL = "llama-3.1-70b-versatile"
+LLM_PROVIDER = "groq"
+QDRANT_URL = ""
+QDRANT_API_KEY = ""
+# Allowed origins for CORS (comma-separated), include your Netlify frontend URL.
+ALLOWED_ORIGINS = ""
+
+[deploy]
+# Optional pre/post deploy hooks. Example: run migrations or seed data.
+# predeploy = "python backend/scripts/predeploy.py"
